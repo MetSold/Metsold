@@ -1,228 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MetSold · Soldadura profesional y económica</title>
-<meta name="description" content="MetSold: diseño y fabricación, soldadura MIG/MAG y TIG, pintura y montaje. Reparaciones de estructuras metálicas. Vallés Oriental y alrededores." />
-<meta name="theme-color" content="#ff6a00" />
-
-<style>
-:root{
-  --bg:#0b0f14; --card:#111821; --muted:#9aa3ad; --text:#e5e7eb;
-  --brand:#ff6a00; --brand-2:#ffb45c; --ok:#22c55e; --maxw:1080px;
-}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
-a{color:#0ea5e9;text-decoration:none}
-img{max-width:100%;height:auto;display:block}
-.container{max-width:var(--maxw);margin-inline:auto;padding:16px}
-.btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700}
-.btn--brand{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#111}
-.btn--ghost{border:1px solid #334155;color:var(--text)}
-.tag{display:inline-flex;gap:8px;align-items:center;background:#0f172a;border:1px solid #1f2937;color:#e2e8f0;padding:8px 10px;border-radius:10px;font-size:.9rem}
-
-header{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid #1f2937}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{width:40px;height:40px;border-radius:8px;object-fit:cover}
-.brand strong{font-size:1.1rem;letter-spacing:.5px}
-.menu a{padding:12px 8px;color:#cbd5e1}
-
-.hero{position:relative;min-height:72vh;display:grid;align-items:end}
-.hero::before{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:
-    linear-gradient(to bottom,rgba(0,0,0,.4),rgba(11,15,20,.95)),
-    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400&auto=format&fit=crop");
-  background-size:cover;background-position:center;
-}
-.hero .content{padding:32px 16px}
-h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:0 0 10px}
-.lead{color:#d1d5db;font-size:1.05rem;margin:0 0 20px}
-.badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-
-.section{padding:36px 0}
-.grid{display:grid;gap:16px}
-@media(min-width:720px){.grid--2{grid-template-columns:1fr 1fr}}
-.card{background:var(--card);border:1px solid #1f2937;border-radius:16px;overflow:hidden}
-.card__img{aspect-ratio:16/10;background:#000;object-fit:cover}
-.card__body{padding:16px}
-h2{font-size:1.7rem;margin:0 0 10px}
-h3{font-size:1.15rem;margin:0 0 6px}
-p{color:#cbd5e1;margin:0 0 10px}
-.ul{margin:10px 0 0 0;padding:0;list-style:none}
-.ul li{display:flex;gap:8px;align-items:flex-start;margin:8px 0}
-.ul li::before{content:"✔";color:var(--ok);font-weight:900;margin-top:2px}
-
-.banner{background:linear-gradient(135deg,rgba(255,106,0,.15),rgba(255,180,92,.08));border:1px solid #1f2937;border-radius:16px;padding:18px}
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;margin-top:10px}
-.kpis strong{font-size:1.3rem;color:#ffd7a1}
-
-.reviews{display:grid;gap:12px}
-.review{background:var(--card);border:1px solid #1f2937;border-radius:16px;padding:14px}
-.stars{color:#fbbf24;letter-spacing:2px}
-.meta{color:#94a3b8;font-size:.9rem}
-
-footer{border-top:1px solid #1f2937;margin-top:30px}
-.footer{display:grid;gap:14px;padding:20px 0}
-.footer small{color:#94a3b8}
-.highlight{color:var(--brand-2)}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MetSold — Servicios de Soldadura en Barcelona</title>
+  <meta name="description" content="Servicios profesionales de soldadura y fabricación metálica en la provincia de Barcelona. Reparaciones, escaleras, puertas, rejas, barandillas, estructuras. Comprometidos con la calidad." />
+  <meta name="theme-color" content="#0b0f14" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
 </head>
+
 <body>
+  <!-- ====== HEADER ====== -->
+  <header class="header" id="header">
+    <div class="container row between center">
+      <a class="brand" href="#inicio">MetSold</a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="cta-header">
+        <a class="btn whats" href="https://wa.me/34658681437?text=Hola%20MetSold,%20me%20gustaría%20pedir%20información." target="_blank">WhatsApp</a>
+        <a class="btn call" href="tel:+34658681437">Llamar</a>
+        <a class="btn mail" href="mailto:info@metsold.es?subject=Solicitud%20de%20presupuesto">Email</a>
+      </div>
+    </div>
+  </header>
 
-<header>
-  <div class="container nav">
-    <a class="brand" href="#inicio">
-      <!-- Si ya subiste img/logo.png, se muestra; si no, se ve el texto -->
-      <img src="img/logo.png" alt="MetSold logo" onerror="this.style.display='none'">
-      <strong>MetSold</strong>
-    </a>
-    <nav class="menu">
-      <a href="#servicios">Servicios</a>
-      <a href="#opiniones">Opiniones</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
+  <!-- ====== PORTADA ====== -->
+  <section id="inicio" class="hero">
+    <div class="hero-media">
+      <img src="https://source.unsplash.com/1920x1080/?welding,workshop" alt="Soldador profesional en taller" />
+      <div class="overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <h1>MetSold</h1>
+      <p class="lead">Comprometidos con la calidad</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="https://wa.me/34658681437?text=Hola%20MetSold,%20me%20gustaría%20pedir%20información." target="_blank">Pedir presupuesto por WhatsApp</a>
+        <a class="btn ghost" href="#servicios">Ver servicios</a>
+      </div>
+      <ul class="bullets">
+        <li>Reparaciones y fabricación a medida</li>
+        <li>Hierro · Acero inoxidable · Aluminio · PVC</li>
+        <li>Montaje profesional y garantía</li>
+      </ul>
+    </div>
+  </section>
 
-<main id="inicio">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="content container">
-      <span class="tag">Soldadura profesional y económica</span>
-      <h1>Soluciones sólidas, duraderas y a medida.</h1>
-      <p class="lead">Diseño, fabricación, pintura y montaje. También reparamos estructuras metálicas donde nos diga el cliente.</p>
-      <div class="badges">
-        <a class="btn btn--brand" href="#contacto">Pide tu presupuesto</a>
-        <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+  <!-- ====== SERVICIOS ====== -->
+  <section id="servicios" class="section container">
+    <h2>Servicios de soldadura y fabricación</h2>
+    <p class="section-lead">Reparamos, fabricamos desde cero e instalamos. Trabajamos con hierro, acero inoxidable, aluminio y PVC.</p>
+
+    <div class="services grid-3">
+      <article class="service card">
+        <img src="https://source.unsplash.com/1200x800/?metal,stairs" alt="Escaleras metálicas" />
+        <div class="service-body">
+          <h3>Escaleras y barandillas</h3>
+          <p>Diseño, fabricación e instalación a medida. Acabados duraderos y seguros.</p>
+        </div>
+      </article>
+
+      <article class="service card">
+        <img src="https://source.unsplash.com/1200x800/?metal,gate" alt="Puertas y rejas metálicas" />
+        <div class="service-body">
+          <h3>Puertas y rejas</h3>
+          <p>Correderas, abatibles y seguridad. Soldadura precisa y herrajes de calidad.</p>
+        </div>
+      </article>
+
+      <article class="service card">
+        <img src="https://source.unsplash.com/1200x800/?welding,repair" alt="Reparaciones de estructuras" />
+        <div class="service-body">
+          <h3>Reparaciones</h3>
+          <p>Refuerzos, fisuras y mantenimiento. Intervenciones rápidas en toda la provincia de Barcelona.</p>
+        </div>
+      </article>
+
+      <article class="service card">
+        <img src="https://source.unsplash.com/1200x800/?metal,furniture" alt="Muebles metálicos" />
+        <div class="service-body">
+          <h3>Muebles metálicos</h3>
+          <p>Mesas, estanterías y piezas combinadas con madera. Fabricación personalizada.</p>
+        </div>
+      </article>
+
+      <article class="service card">
+        <img src="https://source.unsplash.com/1200x800/?stainless,steel" alt="Acero inoxidable" />
+        <div class="service-body">
+          <h3>Acero inoxidable</h3>
+          <p>Soldadura TIG/MIG para acabados limpios y resistentes.</p>
+        </div>
+      </article>
+
+      <article class="service card">
+        <img src="https://source.unsplash.com/1200x800/?spray,paint,metal" alt="Pintura y tratamientos" />
+        <div class="service-body">
+          <h3>Pintura y tratamientos</h3>
+          <p>Pintura, lacado, galvanizado y zincado para máxima protección frente al óxido.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== CONTACTO ====== -->
+  <section id="contacto" class="section alt">
+    <div class="container contact">
+      <div class="contact-info">
+        <h2>Contacto</h2>
+        <p>Provincia de Barcelona · Atención rápida por WhatsApp o teléfono.</p>
+        <ul class="contact-list">
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/34658681437" target="_blank">+34 658 681 437</a></li>
+          <li><strong>Teléfono:</strong> <a href="tel:+34658681437">+34 658 681 437</a></li>
+          <li><strong>Email:</strong> <a href="mailto:info@metsold.es">info@metsold.es</a></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- QUIÉNES SOMOS + FOTO -->
-  <section class="section">
-    <div class="container grid grid--2">
-      <div class="card">
-        <img class="card__img" alt="Taller metálico" src="https://images.unsplash.com/photo-1581093458791-9d09b7678a13?q=80&w=1200&auto=format&fit=crop">
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h2>Quiénes somos</h2>
-          <p>En <strong>MetSold</strong> convertimos tus ideas en realidad. Ofrecemos soluciones a medida con la máxima calidad, al mejor precio y con total eficiencia.</p>
-          <p>Trabajamos con metal, madera, PVC y otros materiales, adaptándonos a cualquier proyecto.</p>
-          <div class="banner">
-            <strong>Calidad garantizada</strong>
-            <div class="kpis">
-              <div><strong>+10</strong><br><small>Años oficio</small></div>
-              <div><strong>24/7</strong><br><small>Respuesta</small></div>
-              <div><strong>100%</strong><br><small>Compromiso</small></div>
-            </div>
-          </div>
-        </div>
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container row between start">
+      <div>
+        <div class="brand small">MetSold</div>
+        <p class="muted">© <span id="year"></span> MetSold. Todos los derechos reservados.</p>
+        <p class="muted">Provincia de Barcelona · info@metsold.es · +34 658 681 437</p>
       </div>
     </div>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section id="servicios" class="section">
-    <div class="container">
-      <h2>Servicios</h2>
-      <div class="grid grid--2">
-        <div class="card">
-          <img class="card__img" src="https://images.unsplash.com/photo-1581092334187-7c74c1f1b8c7?q=80&w=1200&auto=format&fit=crop" alt="Soldadura y fabricación">
-          <div class="card__body">
-            <h3>Diseño y fabricación personalizada</h3>
-            <ul class="ul">
-              <li>Desde cero y a medida</li>
-              <li>Estructuras y componentes metálicos</li>
-              <li>Acero, aluminio, inoxidable…</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__img" src="https://images.unsplash.com/photo-1544829099-95fb6c8c2320?q=80&w=1200&auto=format&fit=crop" alt="Montaje profesional">
-          <div class="card__body">
-            <h3>Montaje profesional</h3>
-            <ul class="ul">
-              <li>Para empresas o particulares</li>
-              <li>En tu ubicación</li>
-              <li>Rápido y seguro</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__img" src="https://images.unsplash.com/photo-1604147706285-e22d905c3c37?q=80&w=1200&auto=format&fit=crop" alt="Pintura industrial">
-          <div class="card__body">
-            <h3>Pintura y acabados</h3>
-            <ul class="ul">
-              <li>Pintura a elección del cliente</li>
-              <li>Tratamientos y protección</li>
-              <li>Entrega lista para usar</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card__img" src="https://images.unsplash.com/photo-1618788372206-10e56b2b8d5a?q=80&w=1200&auto=format&fit=crop" alt="Reparaciones metálicas">
-          <div class="card__body">
-            <h3>Reparaciones metálicas</h3>
-            <ul class="ul">
-              <li>Puertas, rejas, vallados, escaleras, portones…</li>
-              <li>Urgencias y mantenimiento</li>
-              <li>Asesoramiento y presupuesto sin compromiso</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OPINIONES -->
-  <section id="opiniones" class="section">
-    <div class="container">
-      <h2>Opiniones</h2>
-      <div class="reviews">
-        <div class="review"><div class="stars">★★★★★</div><p>“Nos fabricaron una puerta corredera a medida. Ajuste perfecto y trato excelente.”</p><div class="meta">— Laura G.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Soldadura TIG impecable y a tiempo. Muy recomendables.”</p><div class="meta">— Daniel R.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Montaje rápido de barandillas en mi comunidad. Limpios y profesionales.”</p><div class="meta">— Marta P.</div></div>
-        <div class="review"><div class="stars">★★★★☆</div><p>“Reparación de portón industrial. Todo correcto y buen precio.”</p><div class="meta">— Iván S.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Estructura metálica para altillo. Trabajo robusto, precioso y bien pintado.”</p><div class="meta">— Sergio T.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Cerramiento perimetral. Se nota la experiencia.”</p><div class="meta">— Nuria C.</div></div>
-        <div class="review"><div class="stars">★★★★☆</div><p>“Escalera metálica a medida. Muy sólida; repetiría.”</p><div class="meta">— Roberto M.</div></div>
-        <div class="review"><div class="stars">★★★★★</div><p>“Barandilla y pintado final. Acabado de 10.”</p><div class="meta">— Elena V.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="section">
-    <div class="container grid grid--2">
-      <div class="card">
-        <div class="card__body">
-          <h2>Zona y contacto</h2>
-          <p><strong>Vallés Oriental y alrededores.</strong></p>
-          <p>Teléfono / WhatsApp: <a href="https://wa.me/34658681437">658 681 437</a></p>
-          <p>Email: <a href="mailto:info@metsold.es">info@metsold.es</a></p>
-          <div class="badges">
-            <a class="btn btn--brand" href="https://wa.me/34658681437">Abrir WhatsApp</a>
-            <a class="btn btn--ghost" href="mailto:info@metsold.es">Escribir email</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card__img" alt="Mapa técnico" src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&w=1200&auto=format&fit=crop">
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container footer">
-    <small>© <span class="highlight">MetSold</span> · Diseño · Fabricación · Pintura · Montaje · Calidad garantizada</small>
-    <small>Web hecha a medida · <a href="#contacto">Contacto</a></small>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
